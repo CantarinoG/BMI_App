@@ -1,5 +1,6 @@
 package com.example.calculadoraimc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,11 +19,12 @@ class MainActivity : AppCompatActivity() {
         btnCalc.setOnClickListener {
             val weight = editWeight.text.toString().toDoubleOrNull() ?: 0.0
             val height = editHeight.text.toString().toDoubleOrNull() ?: 0.0
-            if(weight == 0.0) Toast.makeText(this, this.getString(R.string.nullWeight), Toast.LENGTH_LONG)
-            else if(height == 0.0) Toast.makeText(this, this.getString(R.string.nullHeight), Toast.LENGTH_LONG)
+            if(weight == 0.0) Toast.makeText(this, this.getString(R.string.nullWeight), Toast.LENGTH_LONG).show()
+            else if(height == 0.0) Toast.makeText(this, this.getString(R.string.nullHeight), Toast.LENGTH_LONG).show()
             else {
                 val bmi = weight / (height * height)
-
+                val intent = Intent(this, ResultActivity::class.java)
+                startActivity(intent)
             }
         }
 
