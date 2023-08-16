@@ -2,5 +2,7 @@
     <string name="app_name">Calculadora IMC</string>
     <string name="calculate">Calcular</string>
     <string name="weight">Peso (Kg)</string>
-    <string name="height">Altura (Cm)</string>
+    <string name="height">Altura (M)</string>
+    <string name="nullWeight">Insira um valor válido para o peso</string>
+    <string name="nullHeight">Insira um valor válido para a altura</string>
 </resources>
