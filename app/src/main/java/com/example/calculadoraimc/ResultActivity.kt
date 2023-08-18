@@ -1,11 +1,13 @@
 package com.example.calculadoraimc
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +19,33 @@ class ResultActivity : AppCompatActivity() {
         val txtBmi: TextView = findViewById(R.id.txtBmi)
         val txtResult: TextView = findViewById(R.id.txtResult)
         val imgResult: ImageView = findViewById<ImageView>(R.id.imgResult)
+        val btnBack: ImageButton = findViewById(R.id.btnBack)
+        val btnInfo: ImageButton = findViewById(R.id.btnInfo)
+
+        btnBack.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+
+        lateinit var alertDialog: AlertDialog
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(R.string.whatIsBmi)
+        builder.setMessage(R.string.aboutBmi)
+        builder.setPositiveButton("Ok") {_, _ ->
+            alertDialog.dismiss()
+        }
+        builder.setNeutralButton(R.string.mainMenu) {_, _ ->
+            Intent(applicationContext, MainActivity::class.java)
+            finish()
+        }
+        alertDialog = builder.create()
+
+
+        btnInfo.setOnClickListener {
+            alertDialog.show()
+        }
+
+        txtBmi.text = String.format("%.1f", bmi)
 
         when {
             bmi < 16 -> {

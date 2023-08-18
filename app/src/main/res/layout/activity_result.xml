@@ -15,6 +15,7 @@
         tools:layout_editor_absoluteX="16dp">
 
         <ImageButton
+            android:id="@+id/btnBack"
             style="@style/btn"
             android:contentDescription="@string/back"
             android:src="@drawable/baseline_arrow_back_24" />
@@ -28,6 +29,7 @@
             android:textSize="24sp" />
 
         <ImageButton
+            android:id="@+id/btnInfo"
             style="@style/btn"
             android:contentDescription="@string/info"
             android:src="@drawable/baseline_info_24" />
@@ -50,7 +52,6 @@
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="..."
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +61,6 @@
         android:id="@+id/txtBmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="..."
         android:textSize="24sp"
         android:layout_marginTop="200dp"
         app:layout_constraintEnd_toEndOf="parent"
