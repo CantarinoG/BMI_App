@@ -7,6 +7,13 @@
     <string name="nullHeight">Insira um valor válido para a altura</string>
     <string name="back">Voltar</string>
     <string name="info">Info</string>
-    <string name="result">O resultado é </string>
     <string name="resultMeter">Medida do resultado</string>
+    <string name="severeUnderweight">Você está gravemente abaixo do peso.</string>
+    <string name="moderateUnderweight">Você está moderadamente abaixo do peso.</string>
+    <string name="underweight">Você está levemente abaixo do peso.</string>
+    <string name="healthyWeight">Parabéns! Você está com o peso ideal.</string>
+    <string name="overweight">Você está com sobrepeso.</string>
+    <string name="gradeIObesity">Você está com Obesidade Grau I.</string>
+    <string name="gradeIIObesity">Você está com Obesidade Grau II (severa).</string>
+    <string name="gradeIIIObesity">Você está com Obesidade Grau III (mórbida).</string>
 </resources>
