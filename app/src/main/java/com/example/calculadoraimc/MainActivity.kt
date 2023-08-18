@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             else {
                 val bmi = weight / (height * height)
                 val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("bmi", bmi)
                 startActivity(intent)
             }
         }

@@ -5,4 +5,8 @@
     <string name="height">Altura (M)</string>
     <string name="nullWeight">Insira um valor válido para o peso</string>
     <string name="nullHeight">Insira um valor válido para a altura</string>
+    <string name="back">Voltar</string>
+    <string name="info">Info</string>
+    <string name="result">O resultado é </string>
+    <string name="resultMeter">Medida do resultado</string>
 </resources>
